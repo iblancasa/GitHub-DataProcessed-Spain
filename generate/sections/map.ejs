@@ -1,0 +1,16 @@
+<% include ../partials/head.ejs %>
+
+<div id="map">
+		</div>
+
+<% include ../partials/scripts.ejs %>
+<script src="assets/js/raphael-min.js"></script>
+<script src="assets/js/map.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $("#map > svg").height( $("#map > svg").width()*0.83);
+  });
+</script>
+
+<% include ../partials/footer.ejs %>

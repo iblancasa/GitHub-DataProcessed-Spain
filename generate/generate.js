@@ -16,5 +16,8 @@ function ejs2html(name, information) {
 files = {};
 
 files['index'] = {title: "Home - GitHub Processed Data Ranking"};
+files['languagesspain'] = {title: "Languages in Spain - GitHub Processed Data Ranking"};
 
 ejs2html("index",files['index']);
+
+ejs2html("languagesspain",files['languagesspain']);
