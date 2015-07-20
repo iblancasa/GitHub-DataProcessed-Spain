@@ -2489,10 +2489,11 @@
 		}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.5);
-			font-size: 1.35em;
-			line-height: 1.75em;
+			color: rgba(255, 255, 255, 1);
+			font-size: 4em;
+			line-height: 1em;
 			margin: 0;
+			background-color:rgba(20, 20, 20, 0.8);
 		}
 
 		#header .image.avatar {
