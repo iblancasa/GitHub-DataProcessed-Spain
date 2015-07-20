@@ -30,6 +30,8 @@
 			$body = $('body'),
 			$header = $('#header');
 
+
+
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
 
@@ -114,7 +116,8 @@
 					});
 
 				});
-
+				var bg = Math.floor((Math.random() * 51) + 1);
+				$header.css('background-image', "url('/assets/css/images/overlay.png'), url('images/bg_es/"+bg+".jpg')");
 	});
 
 })(jQuery);
