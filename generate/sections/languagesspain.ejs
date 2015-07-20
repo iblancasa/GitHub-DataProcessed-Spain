@@ -1,8 +1,11 @@
 <% include ../partials/head.ejs %>
-
+<h1>The most used programming languages by spanish developers in GitHub</h1>
 <div id="map">
 		</div>
 
+
+<table id="leyend">
+</table>
 <% include ../partials/scripts.ejs %>
 <script src="assets/js/raphael-min.js"></script>
 <script src="assets/js/map.js"></script>
@@ -11,6 +14,60 @@
   $(document).ready(function(){
     $("#map > svg").height( $("#map > svg").width()*0.83);
   });
+
+  $.getJSON( "https://raw.githubusercontent.com/iblancasa/GitHub-DataProcessed-Spain/master/languagesProvince.json",
+  	function( data ) {
+			  var languagesCities = {};
+
+				for(i = 0; i < data.length; i++){
+					if(regions[data[i][0]]!=undefined){
+						var languages = data[i][1];
+						var high_language;
+						var number=0;
+
+						for(language in languages){
+							if(languages[language] > number){
+								number = languages[language];
+								high_language = language;
+							}
+						}
+
+						if(languagesCities[high_language]==undefined){
+							languagesCities[high_language]=[];
+						}
+						languagesCities[high_language].push(data[i][0]);
+					}
+				}
+
+
+				var letters = '0123456789ABCDEF'.split('');
+		    var color = '#';
+				for(var language in languagesCities){
+					for (var i = 0; i < 6; i++ ) {
+							color += letters[Math.floor(Math.random() * 16)];
+					}
+
+					for(i = 0; i<languagesCities[language].length; i++){
+						regions[languagesCities[language][i]].node.setAttribute("fill",color);
+					}
+
+					if(language==""){
+						language="Unknown";
+					}
+
+					$("#leyend").
+					   append("<tr><td bgcolor="+color+"></td><td>"+ language +"</td></tr>");
+					color = '#';
+				}
+
+				$("#leyend").
+					append("<tr><td bgcolor='#ffffff'></td><td>Without data</td></tr>");
+
+
+
+
+
+	});
 </script>
 
 <% include ../partials/footer.ejs %>
