@@ -1,0 +1,7 @@
+{
+  "name": "GitHubDataProcessed",
+  "main": "generate.js",
+  "dependencies": {
+    "ejs": "latest"
+  }
+}
