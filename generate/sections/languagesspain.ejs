@@ -3,9 +3,19 @@
 <div id="map">
 		</div>
 
-
+<h2>Map legend</h2>
 <table id="leyend">
 </table>
+
+<h2>How it was calculated?</h2>
+<p>If you visit this <a href="https://github.com/JJ/top-github-users-data">repository</a>, you could find
+	data about developers from different parts in Spain. I took this data and made a count of the languages</p>
+
+<h2>Data</h2>
+<ul class="actions">
+	<li><a href="https://github.com/iblancasa/GitHub-DataProcessed-Spain/blob/master/languagesProvince.json" class="button"> <i class="fa fa-github"></i>Go to the data</a></li>
+</ul>
+
 <% include ../partials/scripts.ejs %>
 <script src="assets/js/raphael-min.js"></script>
 <script src="assets/js/map.js"></script>
@@ -72,7 +82,6 @@
 						regions[languagesCities[language][i]].node.setAttribute("fill",color);
 					}
 
-
 					$("#leyend").
 					   append("<tr><td bgcolor="+color+"></td><td>"+ language +"</td></tr>");
 					color = '#';
@@ -80,11 +89,6 @@
 
 				$("#leyend").
 					append("<tr><td bgcolor='#ffffff'></td><td>Without data</td></tr>");
-
-
-
-
-
 	});
 </script>
 

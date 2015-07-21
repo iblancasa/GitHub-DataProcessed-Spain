@@ -28,9 +28,19 @@
 <div id="map">
 		</div>
 
-
+<h2>Map legend</h2>
 <table id="leyend">
 </table>
+
+<h2>How it was calculated?</h2>
+<p>If you visit this <a href="https://github.com/JJ/top-github-users-data">repository</a>, you could find
+	data about developers from different parts in Spain. I took this data and made a count of the languages</p>
+
+<h2>Data</h2>
+<ul class="actions">
+	<li><a href="https://github.com/iblancasa/GitHub-DataProcessed-Spain/blob/master/languagesProvince.json" class="button"> <i class="fa fa-github"></i>Go to the data</a></li>
+</ul>
+
 </div>
 
 
@@ -57,15 +67,16 @@
   $.getJSON( "https://raw.githubusercontent.com/iblancasa/GitHub-DataProcessed-Spain/master/languagesProvince.json",
   	function( data ) {
 			  var languagesCities = {};
+				var ceuta_melilla = {};
 
 				for(i = 0; i < data.length; i++){
-					if(regions[data[i][0]]!=undefined){
+					if(regions[data[i][0]]!=undefined && data[i][0]!="Ceuta" && data[i][0]!="Melilla"){
 						var languages = data[i][1];
 						var high_language;
 						var number=0;
 
 						for(language in languages){
-							if(languages[language] > number){
+							if(languages[language] > number && language!=""){
 								number = languages[language];
 								high_language = language;
 							}
@@ -76,7 +87,27 @@
 						}
 						languagesCities[high_language].push(data[i][0]);
 					}
+					else if(data[i][0]=="Ceuta" || data[i][0]=="Melilla"){
+						for (lang in data[i][1]){
+							ceuta_melilla[lang] = data[i][1][lang];
+						}
+					}
 				}
+
+				var number = 0;
+				var high_language;
+
+				for(language in ceuta_melilla){
+					if(ceuta_melilla[language] > number && language!=""){
+						number = ceuta_melilla[language];
+						high_language = language;
+					}
+				}
+
+				if(languagesCities[high_language]==undefined){
+					languagesCities[high_language]=[];
+				}
+				languagesCities[high_language].push("Ceuta y Melilla");
 
 
 				var letters = '0123456789ABCDEF'.split('');
@@ -90,10 +121,6 @@
 						regions[languagesCities[language][i]].node.setAttribute("fill",color);
 					}
 
-					if(language==""){
-						language="Unknown";
-					}
-
 					$("#leyend").
 					   append("<tr><td bgcolor="+color+"></td><td>"+ language +"</td></tr>");
 					color = '#';
@@ -101,11 +128,6 @@
 
 				$("#leyend").
 					append("<tr><td bgcolor='#ffffff'></td><td>Without data</td></tr>");
-
-
-
-
-
 	});
 </script>
 
