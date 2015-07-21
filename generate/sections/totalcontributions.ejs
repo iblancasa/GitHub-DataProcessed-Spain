@@ -41,7 +41,12 @@ $(document).ready(function(){
           append("<tr><td>"+position+"</td><td>"+cityName+"</td><td>"+data[i][1][0][date]+"</td></tr>");
       }
 
-      var labels = Object.keys(data[0][1][0]);
+      var labels = [];
+
+      for (i = 0; i< data[0][1].length; i++){
+         labels.push(Object.keys(data[0][1][i]));
+      }
+
       var data_Contrib=[];
 
       for (i = 0; i<max_cities;i++){
@@ -52,8 +57,6 @@ $(document).ready(function(){
             data_Contrib.push(data[i][1][contrib][c]);
           }
         }
-
-        console.log(data_Contrib);
 
         data_Contrib = data_Contrib.reverse();
 
@@ -70,7 +73,6 @@ $(document).ready(function(){
         data_Contrib=[];
       }
 
-      labels = labels.reverse();
 
       var data = {
             labels: labels.reverse(),
