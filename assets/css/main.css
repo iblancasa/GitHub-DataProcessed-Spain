@@ -2259,6 +2259,13 @@
 		width: 100%;
 	}
 
+	table thead > tr >th{
+		border: solid 5px #efefef;
+		text-decoration-style:solid;
+		font-weight: bold;
+		background-color: #D8CEF6;
+	}
+
 		table tbody tr {
 			border: solid 5px #efefef;
 			border-left: 0;

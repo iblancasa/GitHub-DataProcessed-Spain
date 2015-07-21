@@ -1,0 +1,40 @@
+<% include ../partials/head.ejs %>
+
+<table id="contributions">
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Total contributions</th>
+    </tr>
+  </thead>
+</table>
+
+
+<% include ../partials/scripts.ejs %>
+
+<script>
+$(document).ready(function(){
+  var cityName;
+  var dates;
+  var cities = {};
+
+  var max = 5;
+
+  $.getJSON( "https://raw.githubusercontent.com/iblancasa/GitHub-DataProcessed-Spain/master/totalContributions.json",
+    function( data ) {
+      for(i = 0; i<data.length;i++ ){
+        cityName = data[i][0];
+        date = data[i][1][0];
+        date = Object.keys(date)[0];
+
+        $("#contributions").
+          append("<tr><td>"+cityName+"</td><td>"+data[i][1][0][date]+"</td></tr>");
+
+
+      }
+    });
+
+});
+
+</script>
+<% include ../partials/footer.ejs %>
