@@ -1,4 +1,29 @@
-<% include ../partials/head.ejs %>
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title> Total contributions - GitHub Processed Data Ranking </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="http://iblancasa.com/GitHub-DataProcessed-Spain/" class="image avatar"><img src="images/avatar.png" alt="" /></a>
+				<h1>GitHub Processed Data Ranking</h1>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
 
 <h1>Total contributions in each province of Spain</h1>
 
@@ -11,6 +36,7 @@
 </table>
 
 
+<h2>All the provinces</h2>
 
 <h2>Ranking of total contributions</h2>
 <table id="contributions">
@@ -29,12 +55,21 @@
   I added all contributions in each province and I saved the total contributions with
   the date when I did this operations.</p>
 
-<h2>Data</h2>
-<ul class="actions">
-	<li><a href="https://github.com/iblancasa/GitHub-DataProcessed-Spain/blob/master/totalContributions.json" class="button"> <i class="fa fa-github"></i>Go to the data</a></li>
-</ul>
+</div>
 
-<% include ../partials/scripts.ejs %>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">
+  var bg = Math.floor((Math.random() * 51) + 1);
+  $('#header').css('background-image', "url('assets/css/images/overlay.png'), url('images/bg_es/"+bg+".jpg')");
+</script>
+<script src="assets/js/jquery.poptrox.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+
 <script src="assets/js/chart.min.js"></script>
 
 
@@ -141,4 +176,8 @@ $(document).ready(function(){
 });
 
 </script>
-<% include ../partials/footer.ejs %>
+
+
+</body>
+</html>
+
