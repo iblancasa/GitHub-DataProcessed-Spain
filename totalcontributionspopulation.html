@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title> Total contributions - GitHub Processed Data Ranking </title>
+		<title> Total contributions population - GitHub Processed Data Ranking </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -25,7 +25,8 @@
 			<div id="main">
 
 
-<h1>Total contributions in each province of Spain</h1>
+
+<h1>Total contributions / population in each province of Spain</h1>
 
 <p>This chart shows the top 5 provinces in number of contributions</p>
 
@@ -35,9 +36,7 @@
 <table id="legend" style="width:60%; margin: 0 auto;">
 </table>
 
-
-
-<h2>Ranking of total contributions</h2>
+<h2>Ranking of total contributions/population</h2>
 <table id="contributions">
   <thead>
     <tr>
@@ -48,15 +47,17 @@
   </thead>
 </table>
 
-
 <h2>How it was calculated?</h2>
 <p>I took the data from this <a href="https://github.com/JJ/top-github-users-data">repository</a>. Then,
-  I added all contributions in each province and I saved the total contributions with
+  I added all contributions in each province, each one divided population in province and I saved the total contributions with
   the date when I did this operations.</p>
+<p>Population in each province was taken (mainly) from <a href="https://es.wikipedia.org/wiki/Anexo:Capitales_de_Espa%C3%B1a_por_poblaci%C3%B3n">Wikipedia</a>
+  and was saved <a href="https://github.com/iblancasa/GitHub-DataProcessor-Spain/blob/master/cities.json">here</a>.
+
 
 <h2>Data</h2>
 <ul class="actions">
-	<li><a href="https://github.com/iblancasa/GitHub-DataProcessed-Spain/blob/master/totalContributions.json" class="button"> <i class="fa fa-github"></i>Go to the data</a></li>
+	<li><a href="https://github.com/iblancasa/GitHub-DataProcessed-Spain/blob/master/totalContributionsPopulation.json" class="button"> <i class="fa fa-github"></i>Go to the data</a></li>
 </ul>
 
 </div>
@@ -89,7 +90,7 @@ $(document).ready(function(){
 
   var position=1;
 
-  $.getJSON( "https://raw.githubusercontent.com/iblancasa/GitHub-DataProcessed-Spain/master/totalContributions.json",
+  $.getJSON( "https://raw.githubusercontent.com/iblancasa/GitHub-DataProcessed-Spain/master/totalContributionsPopulation.json",
     function( data ) {
       for(i = 0; i < data.length; i++ ){
         cityName = data[i][0];
