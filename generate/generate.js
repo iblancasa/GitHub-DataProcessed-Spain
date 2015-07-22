@@ -18,7 +18,8 @@ files = {};
 files['index'] = {title: "Home - GitHub Processed Data Ranking"};
 files['languagesspain'] = {title: "Languages in Spain - GitHub Processed Data Ranking"};
 files['totalcontributions'] = {title: "Total contributions - GitHub Processed Data Ranking"};
-
+files['totalcontributionspopulation'] = {title: "Total contributions population - GitHub Processed Data Ranking"};
+files['contributionsweek'] = {title: "Contributions in week - GitHub Processed Data Ranking"};
 
 for(var i in files){
   ejs2html(i,files[i]);
