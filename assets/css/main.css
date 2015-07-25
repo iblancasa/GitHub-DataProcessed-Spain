@@ -30,6 +30,12 @@
 		list-style: none;
 	}
 
+	canvas{
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+	}
+
 	blockquote, q {
 		quotes: none;
 	}
