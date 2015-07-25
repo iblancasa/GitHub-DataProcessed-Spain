@@ -7,6 +7,13 @@
 <table id="leyend">
 </table>
 
+<h2>Graphic</h2>
+<canvas id="graph" style="width:60%;" height="400"></canvas>
+
+<h2>Languages used in total</h2>
+<table id="total">
+</table>
+
 <h2>How it was calculated?</h2>
 <p>If you visit this <a href="https://github.com/JJ/top-github-users-data">repository</a>, you could find
 	data about developers from different parts in Spain. I took this data and made a count of the languages</p>
@@ -19,12 +26,12 @@
 <% include ../partials/scripts.ejs %>
 <script src="assets/js/raphael-min.js"></script>
 <script src="assets/js/map.js"></script>
+<script src="assets/js/chart.min.js"></script>
 
 <script>
   $(document).ready(function(){
+		//Map
 	  $("#map > svg").height( $("#map > svg").width()*0.83);
-
-
 	  $.getJSON( "https://raw.githubusercontent.com/iblancasa/GitHub-DataProcessed-Spain/master/languagesProvince.json",
 	  	function( data ) {
 				  var languagesCities = {};
@@ -90,6 +97,86 @@
 					$("#leyend").
 						append("<tr><td bgcolor='#ffffff'></td><td>Without data</td></tr>");
 		});
+
+
+
+		$.getJSON("https://raw.githubusercontent.com/iblancasa/GitHub-DataProcessed-Spain/master/spanishLanguages.json",
+	  	function( data ) {
+				var languages = [];
+				var others = 0;
+				var developers = 0;
+				var min = 20;
+				var char_data = [];
+				var letters = '0123456789ABCDEF'.split('');
+				var color = "#";
+
+				for(i = 0; i < data.length; i++){
+
+					developers += data[i][1];
+					if(data[i][1]>=min){
+						for (var k = 0; k < 6; k++ ) {
+								color+= letters[Math.floor(Math.random() * 16)];
+						}
+
+						char_data.push({
+			        value: data[i][1],
+			        color:color,
+			        label: data[i][0]
+		    		});
+					}
+					else{
+						others+=data[i][1];
+					}
+
+				   color="#";
+				}
+
+
+				for (var k = 0; k < 6; k++ ) {
+						color+= letters[Math.floor(Math.random() * 16)];
+				}
+
+				char_data.push({
+					value: others,
+					color:color,
+					label: "Others"
+				});
+
+
+
+				var options = {
+				    //Boolean - Whether we should show a stroke on each segment
+				    segmentShowStroke : true,
+
+				    //String - The colour of each segment stroke
+				    segmentStrokeColor : "#fff",
+
+				    //Number - The width of each segment stroke
+				    segmentStrokeWidth : 2,
+
+				    //Number - The percentage of the chart that we cut out of the middle
+				    percentageInnerCutout : 50, // This is 0 for Pie charts
+
+				    //Number - Amount of animation steps
+				    animationSteps : 100,
+
+				    //String - Animation easing effect
+				    animationEasing : "easeOutBounce",
+
+				    //Boolean - Whether we animate the rotation of the Doughnut
+				    animateRotate : true,
+
+				    //Boolean - Whether we animate scaling the Doughnut from the centre
+				    animateScale : false,
+
+				}
+
+
+				var ctx = $("#graph").get(0).getContext("2d");
+				var myPieChart = new Chart(ctx).Pie(char_data,options);
+			});
+
+
 	});
 </script>
 
