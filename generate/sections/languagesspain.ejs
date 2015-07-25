@@ -102,24 +102,28 @@
 
 		$.getJSON("https://raw.githubusercontent.com/iblancasa/GitHub-DataProcessed-Spain/master/spanishLanguages.json",
 	  	function( data ) {
+				var developers = 0;
+				for(i = 0; i < data.length; i++){
+					developers += data[i][1];
+				}
+
+
+
 				var languages = [];
 				var others = 0;
-				var developers = 0;
-				var min = 20;
+				var min = 30;
 				var char_data = [];
 				var letters = '0123456789ABCDEF'.split('');
 				var color = "#";
 
 				for(i = 0; i < data.length; i++){
-
-					developers += data[i][1];
 					if(data[i][1]>=min){
 						for (var k = 0; k < 6; k++ ) {
 								color+= letters[Math.floor(Math.random() * 16)];
 						}
 
 						char_data.push({
-			        value: data[i][1],
+			        value: (data[i][1]/developers*100).toFixed(2),
 			        color:color,
 			        label: data[i][0]
 		    		});
@@ -137,7 +141,7 @@
 				}
 
 				char_data.push({
-					value: others,
+					value: (others/developers*100).toFixed(2),
 					color:color,
 					label: "Others"
 				});
@@ -145,29 +149,14 @@
 
 
 				var options = {
-				    //Boolean - Whether we should show a stroke on each segment
 				    segmentShowStroke : true,
-
-				    //String - The colour of each segment stroke
 				    segmentStrokeColor : "#fff",
-
-				    //Number - The width of each segment stroke
 				    segmentStrokeWidth : 2,
-
-				    //Number - The percentage of the chart that we cut out of the middle
-				    percentageInnerCutout : 50, // This is 0 for Pie charts
-
-				    //Number - Amount of animation steps
+				    percentageInnerCutout : 0,
 				    animationSteps : 100,
-
-				    //String - Animation easing effect
-				    animationEasing : "easeOutBounce",
-
-				    //Boolean - Whether we animate the rotation of the Doughnut
+				    animationEasing : "easeOutQuart",
 				    animateRotate : true,
 
-				    //Boolean - Whether we animate scaling the Doughnut from the centre
-				    animateScale : false,
 
 				}
 
