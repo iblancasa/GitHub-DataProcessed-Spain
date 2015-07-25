@@ -8,6 +8,7 @@
     "grunt": "latest",
     "grunt-ejs": "latest",
     "matchdep": "latest",
-    "grunt-contrib-copy": "latest"
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-clean": "latest"
   }
 }

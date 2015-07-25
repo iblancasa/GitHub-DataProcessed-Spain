@@ -5,7 +5,7 @@ module.exports = function(grunt) {
       all: {
         options: '<%= opt %>',
         src: ['sections/*.ejs'],
-        dest: 'dist',
+        dest: 'build',
         expand: true,
         ext: '.html',
       },
@@ -16,20 +16,21 @@ module.exports = function(grunt) {
          {
            expand : true,
            dest   : '../',
-           cwd    : 'dist/sections',
+           cwd    : 'build/sections',
            src    : [
-             '*'
+             '**/*'
            ]
          }
        ]
      }
-   }
+   },
+   clean: ["build"]
   });
 
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 
-   grunt.registerTask('default', ['ejs','copy']);
+   grunt.registerTask('default', ['ejs','copy','clean']);
 
 };
