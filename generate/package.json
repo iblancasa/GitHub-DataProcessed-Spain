@@ -3,5 +3,10 @@
   "main": "generate.js",
   "dependencies": {
     "ejs": "latest"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-ejs": "latest",
+    "matchdep": "~0.1.2"
   }
 }
