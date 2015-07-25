@@ -9,6 +9,5 @@
     "grunt-ejs": "latest",
     "matchdep": "latest",
     "grunt-contrib-copy": "latest"
-
   }
 }
