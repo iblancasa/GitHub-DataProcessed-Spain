@@ -9,12 +9,27 @@ module.exports = function(grunt) {
         expand: true,
         ext: '.html',
       },
-    }
+    },
+    copy: {
+     foo : {
+       files : [
+         {
+           expand : true,
+           dest   : '../',
+           cwd    : 'dist/sections',
+           src    : [
+             '*'
+           ]
+         }
+       ]
+     }
+   }
   });
 
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  grunt.registerTask('default', ['ejs']);
+
+   grunt.registerTask('default', ['ejs','copy']);
 
 };
