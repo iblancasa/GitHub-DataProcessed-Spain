@@ -10,6 +10,26 @@ module.exports = function(grunt) {
         ext: '.html',
       },
     },
+
+    htmlmin: {
+       dist: {
+         options: {
+           removeComments: true,
+           collapseWhitespace: true,
+           removeScriptTypeAttributes: true,
+           removeIgnored: true,
+           minifyJS: true,
+           minifyCSS: true,
+         },
+         files: [{
+                expand: true,
+                cwd: 'build/sections',
+                src: '**/*.html',
+                dest: 'build/sections'
+            }]
+       }
+    },
+
     copy: {
      foo : {
        files : [
@@ -27,10 +47,10 @@ module.exports = function(grunt) {
    clean: ["build"]
   });
 
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-
-   grunt.registerTask('default', ['ejs','copy','clean']);
+  grunt.registerTask('default', ['ejs','htmlmin','copy','clean']);
 
 };
