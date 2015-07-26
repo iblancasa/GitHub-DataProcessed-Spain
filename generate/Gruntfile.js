@@ -54,9 +54,9 @@ module.exports = function(grunt) {
          },
          files: [{
                 expand: true,
-                cwd: 'build/sections',
-                src: '**/*.html',
-                dest: 'build/sections'
+                cwd: '../',
+                src: '*.html',
+                dest: '../'
             }]
        }
     },
@@ -140,7 +140,7 @@ module.exports = function(grunt) {
      }
    },
 
-   clean: ["build/**/*"]
+   clean: ["build/**/*","build"]
   });
 
   grunt.loadNpmTasks('grunt-contrib-htmlmin');

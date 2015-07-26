@@ -15,6 +15,7 @@
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-imagemin": "latest",
     "grunt-uncss": "latest",
-    "grunt-processhtml":"latest"
+    "grunt-processhtml":"latest",
+    "imagemin-mozjpeg":"latest"
   }
 }
