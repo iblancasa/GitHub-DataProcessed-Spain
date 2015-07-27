@@ -1,71 +1,63 @@
 [
     [
         "JavaScript", 
-        869
+        893
     ], 
     [
         "Java", 
-        646
+        660
     ], 
     [
         "Python", 
-        476
+        503
     ], 
     [
         "PHP", 
-        382
+        390
     ], 
     [
         "CSS", 
-        320
+        319
     ], 
     [
         "Shell", 
-        289
+        296
     ], 
     [
         "Ruby", 
-        278
+        286
     ], 
     [
         "R", 
-        201
+        200
     ], 
     [
         "C++", 
-        182
+        183
     ], 
     [
         "HTML", 
-        149
+        150
     ], 
     [
         "C", 
-        128
+        127
     ], 
     [
         "C#", 
-        119
+        123
     ], 
     [
         "JavaScript and CSS", 
-        104
+        107
     ], 
     [
         "Objective-C", 
-        91
+        92
     ], 
     [
         "Makefile", 
         39
-    ], 
-    [
-        "Perl", 
-        27
-    ], 
-    [
-        "Arduino", 
-        26
     ], 
     [
         "CSS and JavaScript", 
@@ -73,7 +65,15 @@
     ], 
     [
         "Scala", 
-        23
+        25
+    ], 
+    [
+        "Arduino", 
+        25
+    ], 
+    [
+        "Perl", 
+        24
     ], 
     [
         "Go", 
@@ -85,42 +85,38 @@
     ], 
     [
         "Matlab", 
-        17
+        16
     ], 
     [
         "PHP and CSS", 
         15
     ], 
     [
-        "Swift", 
-        13
+        "TeX", 
+        15
     ], 
     [
-        "TeX", 
-        13
+        "Swift", 
+        14
+    ], 
+    [
+        "Groovy", 
+        12
+    ], 
+    [
+        "HTML and CSS", 
+        11
+    ], 
+    [
+        "CoffeeScript", 
+        11
     ], 
     [
         "Java and HTML", 
         11
     ], 
     [
-        "CoffeeScript", 
-        10
-    ], 
-    [
-        "HTML and CSS", 
-        10
-    ], 
-    [
-        "ActionScript", 
-        10
-    ], 
-    [
-        "Groovy", 
-        10
-    ], 
-    [
-        "Haskell", 
+        "Lua", 
         10
     ], 
     [
@@ -128,24 +124,28 @@
         9
     ], 
     [
+        "Erlang", 
+        9
+    ], 
+    [
+        "Haskell", 
+        9
+    ], 
+    [
         "Java and CSS", 
         8
     ], 
     [
-        "Python and Shell", 
-        8
-    ], 
-    [
-        "Lua", 
-        8
-    ], 
-    [
-        "Erlang", 
+        "ActionScript", 
         8
     ], 
     [
         "JavaScript and HTML", 
         8
+    ], 
+    [
+        "ApacheConf", 
+        7
     ], 
     [
         "Objective-C and Ruby", 
@@ -156,11 +156,15 @@
         7
     ], 
     [
+        "Python and Shell", 
+        7
+    ], 
+    [
         "JavaScript and PHP", 
         7
     ], 
     [
-        "Java and Python", 
+        "Ruby and JavaScript", 
         7
     ], 
     [
@@ -172,19 +176,11 @@
         6
     ], 
     [
-        "ApacheConf", 
-        6
-    ], 
-    [
-        "CSS and HTML", 
+        "Java and Python", 
         6
     ], 
     [
         "Emacs Lisp", 
-        6
-    ], 
-    [
-        "VimL", 
         6
     ], 
     [
@@ -196,19 +192,11 @@
         5
     ], 
     [
-        "Shell and Java", 
+        "Java and Groovy", 
         5
     ], 
     [
         "Clojure", 
-        5
-    ], 
-    [
-        "Ruby and JavaScript", 
-        5
-    ], 
-    [
-        "Java and PHP", 
         5
     ], 
     [
@@ -220,23 +208,19 @@
         5
     ], 
     [
-        "JavaScript and Shell", 
+        "VimL", 
         5
     ], 
     [
+        "Shell and Java", 
+        4
+    ], 
+    [
+        "Python and HTML", 
+        4
+    ], 
+    [
         "JavaScript and Python", 
-        4
-    ], 
-    [
-        "JavaScript and Java", 
-        4
-    ], 
-    [
-        "Batchfile", 
-        4
-    ], 
-    [
-        "VHDL", 
         4
     ], 
     [
@@ -244,7 +228,15 @@
         4
     ], 
     [
-        "ASP", 
+        "Assembly", 
+        4
+    ], 
+    [
+        "Java and PHP", 
+        4
+    ], 
+    [
+        "CSS and HTML", 
         4
     ], 
     [
@@ -252,19 +244,19 @@
         4
     ], 
     [
+        "Python and C", 
+        4
+    ], 
+    [
         "Python and R", 
         4
     ], 
     [
-        "PHP and Java", 
-        3
+        "JavaScript and Shell", 
+        4
     ], 
     [
         "Web Ontology Language", 
-        3
-    ], 
-    [
-        "Python and HTML", 
         3
     ], 
     [
@@ -272,7 +264,7 @@
         3
     ], 
     [
-        "Java and Groovy", 
+        "Haxe", 
         3
     ], 
     [
@@ -280,19 +272,23 @@
         3
     ], 
     [
-        "Java and C++", 
-        3
-    ], 
-    [
         "Shell and Python", 
         3
     ], 
     [
-        "Assembly", 
+        "VHDL", 
         3
     ], 
     [
         "C++ and Makefile", 
+        3
+    ], 
+    [
+        "JavaScript and Java", 
+        3
+    ], 
+    [
+        "Prolog", 
         3
     ], 
     [
@@ -328,11 +324,11 @@
         3
     ], 
     [
-        "Python and C", 
+        "Java and XML", 
         3
     ], 
     [
-        "Java and XML", 
+        "Batchfile", 
         3
     ], 
     [
@@ -340,8 +336,8 @@
         3
     ], 
     [
-        "PowerShell", 
-        3
+        "PHP and Java", 
+        2
     ], 
     [
         "IDL and C++", 
@@ -353,6 +349,10 @@
     ], 
     [
         "R and C++", 
+        2
+    ], 
+    [
+        "HTML and Java", 
         2
     ], 
     [
@@ -368,19 +368,11 @@
         2
     ], 
     [
-        "C++ and HTML", 
+        "R and Java", 
         2
     ], 
     [
         "CoffeeScript and CSS", 
-        2
-    ], 
-    [
-        "R and CSS", 
-        2
-    ], 
-    [
-        "Haxe", 
         2
     ], 
     [
@@ -392,11 +384,27 @@
         2
     ], 
     [
-        "Java and Objective-C", 
+        "Java and C++", 
         2
     ], 
     [
-        "R and Java", 
+        "ASP", 
+        2
+    ], 
+    [
+        "Visual Basic and Shell", 
+        2
+    ], 
+    [
+        "SourcePawn", 
+        2
+    ], 
+    [
+        "Shell and Perl", 
+        2
+    ], 
+    [
+        "Python and PHP", 
         2
     ], 
     [
@@ -405,14 +413,6 @@
     ], 
     [
         "Python and C++", 
-        2
-    ], 
-    [
-        "TeX and R", 
-        2
-    ], 
-    [
-        "Makefile and Java", 
         2
     ], 
     [
@@ -428,19 +428,15 @@
         2
     ], 
     [
-        "Prolog", 
+        "NSIS", 
         2
     ], 
     [
-        "CSS and PHP", 
+        "R and CSS", 
         2
     ], 
     [
         "F#", 
-        2
-    ], 
-    [
-        "Java and GLSL", 
         2
     ], 
     [
@@ -452,15 +448,15 @@
         2
     ], 
     [
+        "C and Shell", 
+        2
+    ], 
+    [
         "CMake and C++", 
         2
     ], 
     [
         "Python and Arduino", 
-        2
-    ], 
-    [
-        "HTML and Java", 
         2
     ], 
     [
@@ -472,11 +468,19 @@
         2
     ], 
     [
-        "C and C++", 
+        "Java and GLSL", 
+        2
+    ], 
+    [
+        "CSS and PHP", 
         2
     ], 
     [
         "Racket", 
+        2
+    ], 
+    [
+        "PowerShell", 
         2
     ], 
     [
@@ -488,6 +492,10 @@
         1
     ], 
     [
+        "PHP and Shell", 
+        1
+    ], 
+    [
         "Matlab and Python", 
         1
     ], 
@@ -496,11 +504,15 @@
         1
     ], 
     [
-        "TypeScript", 
+        "Java and Erlang", 
         1
     ], 
     [
         "Objective-C and Java", 
+        1
+    ], 
+    [
+        "XS", 
         1
     ], 
     [
@@ -532,11 +544,11 @@
         1
     ], 
     [
-        "C++ and Assembly", 
+        "Elixir", 
         1
     ], 
     [
-        "Elixir", 
+        "R and Mathematica", 
         1
     ], 
     [
@@ -545,6 +557,10 @@
     ], 
     [
         "C# and F#", 
+        1
+    ], 
+    [
+        "Ruby and Shell", 
         1
     ], 
     [
@@ -568,6 +584,10 @@
         1
     ], 
     [
+        "C++ and HTML", 
+        1
+    ], 
+    [
         "Shell and C", 
         1
     ], 
@@ -576,7 +596,7 @@
         1
     ], 
     [
-        "Python and nesC", 
+        "CoffeeScript and JavaScript", 
         1
     ], 
     [
@@ -584,11 +604,15 @@
         1
     ], 
     [
+        "Java and C", 
+        1
+    ], 
+    [
         "C++ and D", 
         1
     ], 
     [
-        "CoffeeScript and JavaScript", 
+        "Assembly and Visual Basic", 
         1
     ], 
     [
@@ -600,7 +624,7 @@
         1
     ], 
     [
-        "Java and TeX", 
+        "C++ and R", 
         1
     ], 
     [
@@ -608,7 +632,19 @@
         1
     ], 
     [
+        "Java and D", 
+        1
+    ], 
+    [
         "JavaScript and CoffeeScript", 
+        1
+    ], 
+    [
+        "Python and Perl", 
+        1
+    ], 
+    [
+        "C# and PowerShell", 
         1
     ], 
     [
@@ -624,15 +660,11 @@
         1
     ], 
     [
-        "Processing and Python", 
+        "C++ and Eagle", 
         1
     ], 
     [
         "Go and Shell", 
-        1
-    ], 
-    [
-        "Matlab and HTML", 
         1
     ], 
     [
@@ -648,6 +680,14 @@
         1
     ], 
     [
+        "PLpgSQL and Java", 
+        1
+    ], 
+    [
+        "Awk", 
+        1
+    ], 
+    [
         "Web Ontology Language and HTML", 
         1
     ], 
@@ -657,10 +697,6 @@
     ], 
     [
         "HTML and PHP", 
-        1
-    ], 
-    [
-        "Inno Setup and Visual Basic", 
         1
     ], 
     [
@@ -680,11 +716,19 @@
         1
     ], 
     [
+        "Java and Objective-C", 
+        1
+    ], 
+    [
         "ApacheConf and PHP", 
         1
     ], 
     [
-        "Java and Matlab", 
+        "Scala and Shell", 
+        1
+    ], 
+    [
+        "Arduino and JavaScript", 
         1
     ], 
     [
@@ -696,11 +740,7 @@
         1
     ], 
     [
-        "SourcePawn", 
-        1
-    ], 
-    [
-        "Arduino and C#", 
+        "Shell and C#", 
         1
     ], 
     [
@@ -716,10 +756,6 @@
         1
     ], 
     [
-        "Shell and Perl", 
-        1
-    ], 
-    [
         "PHP and XML", 
         1
     ], 
@@ -728,19 +764,15 @@
         1
     ], 
     [
+        "Perl and PHP", 
+        1
+    ], 
+    [
         "Java and NSIS", 
         1
     ], 
     [
-        "Python and PHP", 
-        1
-    ], 
-    [
         "Vala", 
-        1
-    ], 
-    [
-        "Visual Basic and Shell", 
         1
     ], 
     [
@@ -752,11 +784,19 @@
         1
     ], 
     [
-        "Scala and Shell", 
+        "TeX and R", 
         1
     ], 
     [
-        "Java and C", 
+        "Python and nesC", 
+        1
+    ], 
+    [
+        "Swift and Objective-C", 
+        1
+    ], 
+    [
+        "Makefile and Java", 
         1
     ], 
     [
@@ -764,7 +804,7 @@
         1
     ], 
     [
-        "Python and Perl", 
+        "R and TeX", 
         1
     ], 
     [
@@ -784,11 +824,15 @@
         1
     ], 
     [
-        "C and Makefile", 
+        "Go and Scala", 
         1
     ], 
     [
-        "NSIS", 
+        "Java and Batchfile", 
+        1
+    ], 
+    [
+        "C and Makefile", 
         1
     ], 
     [
@@ -800,7 +844,7 @@
         1
     ], 
     [
-        "Scala and Go", 
+        "C and C++", 
         1
     ], 
     [
@@ -824,6 +868,10 @@
         1
     ], 
     [
+        "C++ and Shell", 
+        1
+    ], 
+    [
         "Java and VimL", 
         1
     ], 
@@ -840,7 +888,7 @@
         1
     ], 
     [
-        "Shell and C#", 
+        "Arduino and C#", 
         1
     ], 
     [
@@ -868,10 +916,6 @@
         1
     ], 
     [
-        "Java and Batchfile", 
-        1
-    ], 
-    [
         "Lua and Logos", 
         1
     ], 
@@ -880,15 +924,19 @@
         1
     ], 
     [
-        "Arduino and JavaScript", 
+        "Processing and Python", 
+        1
+    ], 
+    [
+        "Clojure and Processing", 
+        1
+    ], 
+    [
+        "TypeScript", 
         1
     ], 
     [
         "Python and CSS", 
-        1
-    ], 
-    [
-        "PHP and Ruby", 
         1
     ], 
     [
@@ -940,10 +988,6 @@
         1
     ], 
     [
-        "C and Shell", 
-        1
-    ], 
-    [
         "C# and ASP", 
         1
     ], 
@@ -960,15 +1004,11 @@
         1
     ], 
     [
-        "Makefile and JavaScript", 
-        1
-    ], 
-    [
         "Shell and Erlang", 
         1
     ], 
     [
-        "Go and Makefile", 
+        "Matlab and HTML", 
         1
     ], 
     [
@@ -977,10 +1017,6 @@
     ], 
     [
         "Objective-C and Swift", 
-        1
-    ], 
-    [
-        "C++ and Shell", 
         1
     ], 
     [
