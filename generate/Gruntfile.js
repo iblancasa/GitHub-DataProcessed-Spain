@@ -88,7 +88,13 @@ module.exports = function(grunt) {
                  cwd: 'assets/js',
                  src: '**/*.js',
                  dest: '../assets/js'
-             }]
+             },
+             {
+                  expand: true,
+                  cwd: 'js',
+                  src: '**/*.js',
+                  dest: '../js'
+              }]
         }
       },
 
