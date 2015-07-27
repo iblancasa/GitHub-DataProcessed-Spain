@@ -1,6 +1,10 @@
-var char;
+/**
+* Takes this JSON https://raw.githubusercontent.com/iblancasa/GitHub-DataProcessed-Spain/master/totalContributionsPopulation.json
+* and creates a graph and a table
+*/
 
 $(document).ready(function(){
+  var char;
   var cityName;
   var dates;
   var dataset = [];
@@ -11,7 +15,8 @@ $(document).ready(function(){
 
   $.getJSON( "https://raw.githubusercontent.com/iblancasa/GitHub-DataProcessed-Spain/master/totalContributionsPopulation.json",
     function( data ) {
-      for(i = 0; i < data.length; i++ ){
+
+      for(i = 0; i < data.length; i++ ){//Contributions / city
         cityName = data[i][0];
         date = data[i][1][0];
         date = Object.keys(date)[0];
@@ -35,20 +40,20 @@ $(document).ready(function(){
       for (i = 0; i<max_cities;i++){
         color = "";
 
-        for (var k = 0; k < 3; k++ ) {
+        for (var k = 0; k < 3; k++ ) {//Random color
             color += Math.floor(Math.random() * 255);
             color +=","
         }
+
         for(var contrib in data[i][1]){
           for(var c in data[i][1][contrib]){
             data_Contrib.push(data[i][1][contrib][c]);
           }
-        }
-        console.log(color);
+        };
 
         data_Contrib = data_Contrib.reverse();
 
-        dataset.push({
+        dataset.push({//Create dataset
             label: data[i][0],
             fillColor: "rgba("+color+"0.2)",
             strokeColor: "rgba("+color+"1)",
@@ -93,8 +98,5 @@ $(document).ready(function(){
         var ctx = $("#char").get(0).getContext("2d");
 
         char = new Chart(ctx).Line(data, options);
-
-
     });
-
 });

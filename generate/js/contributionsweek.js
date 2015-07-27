@@ -1,4 +1,7 @@
-
+/**
+* Takes this JSON https://raw.githubusercontent.com/iblancasa/GitHub-DataProcessed-Spain/master/contributionsWeek.json
+* and creates a table and a graph
+*/
 
 $(document).ready(function(){
   var cityName;
@@ -18,7 +21,7 @@ $(document).ready(function(){
         position = i+1;
 
         $("#contributions").
-          append("<tr><td>"+position+"</td><td >"+cityName+"</td><td>"+data[i][1][0][date]+"</td></tr>");
+          append("<tr><td>"+position+"</td><td >"+cityName+"</td><td>"+data[i][1][0][date]+"</td></tr>");//Adding to table
       }
 
       var labels = [];
@@ -32,13 +35,14 @@ $(document).ready(function(){
 
       var color;
 
-      for (i = 0; i<max_cities;i++){
+      for (i = 0; i<max_cities;i++){//Cities most active
         color = "";
 
-        for (var k = 0; k < 3; k++ ) {
+        for (var k = 0; k < 3; k++ ) {//Random color
             color += Math.floor(Math.random() * 255);
             color +=","
         }
+
         for(var contrib in data[i][1]){
           for(var c in data[i][1][contrib]){
             data_Contrib.push(data[i][1][contrib][c]);
@@ -47,7 +51,7 @@ $(document).ready(function(){
 
         data_Contrib = data_Contrib.reverse();
 
-        dataset.push({
+        dataset.push({//Generate dataset
             label: data[i][0],
             fillColor: "rgba("+color+"0.2)",
             strokeColor: "rgba("+color+"1)",
@@ -59,7 +63,7 @@ $(document).ready(function(){
         });
 
         $("#legend").
-          append("<tr><td style='background-color:rgba("+color+"1);'></td><td>"+data[i][0]+"</td></tr>");
+          append("<tr><td style='background-color:rgba("+color+"1);'></td><td>"+data[i][0]+"</td></tr>");//Adding to legend
 
         data_Contrib=[];
       }
@@ -89,12 +93,9 @@ $(document).ready(function(){
                 datasetFill : true,
 
             };
-        // Get context with jQuery - using jQuery's .get() method.
-        var ctx = $("#char").get(0).getContext("2d");
+      var ctx = $("#char").get(0).getContext("2d");
 
       var  char = new Chart(ctx).Line(data, options);
 
-
     });
-
 });
