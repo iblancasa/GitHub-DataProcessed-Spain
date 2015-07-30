@@ -9,7 +9,7 @@ $(document).ready(function(){
 
       var developers = 0;
       for(i = 0; i < data.length; i++){
-        developers += data[i][1];//Total developers
+        developers += parseInt(data[i][1]);//Total developers
       }
 
       var languages = [];
@@ -20,19 +20,19 @@ $(document).ready(function(){
       var color = "#";
 
       for(i = 0; i < data.length; i++){
-        if(data[i][1]>=min){//Will be in the graph
+        if(parseInt(data[i][1])>=min){//Will be in the graph
           for (var k = 0; k < 6; k++ ) {//Random color
               color+= letters[Math.floor(Math.random() * 16)];
           }
 
           char_data.push({
-            value: (data[i][1]/developers*100).toFixed(2),
+            value: (parseInt(data[i][1])/developers*100).toFixed(2),
             color:color,
             label: data[i][0]
           });
         }
         else{
-          others+=data[i][1];
+          others+=parseInt(data[i][1]);
         }
 
          color="#";
