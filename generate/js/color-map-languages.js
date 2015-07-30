@@ -16,14 +16,13 @@ $(document).ready(function(){
           //Region in map and is not Ceuta or Melilla
           if(regions[data[i][0][0]]!=undefined && data[i][0]!="Ceuta" && data[i][0][0]!="Melilla"){
             var languages = data[i][1];
-            var high_language;
+            var high_language = undefined;
             var number=0;
 
-
-
             for(language in languages){//Language most used
-              if(languages[language][1] > number && languages[language][0]!=""){
-                number = languages[language][1];
+              if(parseInt(languages[language][1]) > number && languages[language][0]!=""){
+
+                number = parseInt(languages[language][1]);
                 high_language =  languages[language][0];
               }
             }
@@ -35,7 +34,7 @@ $(document).ready(function(){
           }
           else if(data[i][0][0]=="Ceuta" || data[i][0][0]=="Melilla"){
             for (lang in data[i][1]){
-              ceuta_melilla[data[i][1][lang][0]] = data[i][1][lang][0];
+              ceuta_melilla[data[i][1][lang][0]] = parseInt(data[i][1][lang][0]);
             }
           }
         }
